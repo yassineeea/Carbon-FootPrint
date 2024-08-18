@@ -110,7 +110,7 @@
 ## About The Project 📚
 
 
-[![Pizza Sales Analysis Screenshot](https://github.com/yassineeea/Carbon-FootPrint/blob/main/CarbonDashboard/Dash1.png)](https://example.com)
+[![Pizza Sales Analysis Screenshot](https://github.com/yassineeea/Carbon-FootPrint/blob/main/CarbonDashboard/dash1.png)](https://example.com)
 
 
 The Pizza Sales Analysis project aimed to explore and understand sales trends, customer preferences, and performance across different pizza categories and sizes. By analyzing a comprehensive dataset of pizza sales, the project sought to uncover insights that could help optimize inventory management, improve marketing strategies, and enhance overall sales performance.
@@ -251,10 +251,10 @@ ORDER BY TotalRevenue DESC;
 ```
 ### 3. Data Visualization with Power BI 📊
 - **Dashboard Creation:** Leveraging Power BI, I transformed the processed data into interactive, insightful dashboards that provide a comprehensive view of pizza sales performance over time.  
-[![Pizza Sales Analysis Screenshot](https://github.com/yassineeea/Pizza-Sales-Analysis/blob/main/Pizza%20Sales%20Images/PizzaDash.png)](https://example.com)
+[![Pizza Sales Analysis Screenshot](https://github.com/yassineeea/Carbon-FootPrint/blob/main/CarbonDashboard/dash1.png)](https://example.com)
 
  
-[![Pizza Sales Analysis Screenshot](https://github.com/yassineeea/Pizza-Sales-Analysis/blob/main/Pizza%20Sales%20Images/pizzadash2.png)](https://example.com)
+[![Pizza Sales Analysis Screenshot](https://github.com/yassineeea/Carbon-FootPrint/blob/main/CarbonDashboard/dash2.png)](https://example.com)
 
 
 ### 4. Business Insights and Reporting 🧠
