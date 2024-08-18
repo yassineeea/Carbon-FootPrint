@@ -44,7 +44,7 @@
   <h3 align="center">Carbon FootPrint Analysis </h3>
 
   <p align="center">
-    Comprehensive analysis of pizza sales data, driven by interactive visualizations and insights
+    A comprehensive analysis of carbon emissions data, enhanced with interactive visualizations and actionable insights.
     <br />
     <a href="https://github.com/yassineeea/Pizza-Sales-Analysis/blob/main/KPIreport.docx"><strong>Explore the docx »</strong></a>
     <br />
@@ -113,13 +113,13 @@
 [![Pizza Sales Analysis Screenshot](https://github.com/yassineeea/Carbon-FootPrint/blob/main/CarbonDashboard/dash1.png)](https://example.com)
 
 
-The Pizza Sales Analysis project aimed to explore and understand sales trends, customer preferences, and performance across different pizza categories and sizes. By analyzing a comprehensive dataset of pizza sales, the project sought to uncover insights that could help optimize inventory management, improve marketing strategies, and enhance overall sales performance.
+The Carbon Footprint Analysis project was designed to explore and understand global carbon emissions trends, focusing on the contributions of various countries and energy sources. By analyzing an extensive dataset of CO2 emissions, this project aimed to uncover insights that could inform policy decisions, guide sustainable practices, and support efforts to mitigate climate change.
+
 
 #### Goals 🎯
-* Identify Top Performers🥇: Determine which pizza categories and sizes contribute most to total revenue and orders.
-* Analyze Sales Trends📈: Understand the daily, weekly, and monthly trends in pizza orders to optimize supply chain and marketing efforts.
-* Customer Insights🕒: Identify peak order times and high-demand periods to align business strategies accordingly.
-
+* Identify Top Contributors 🥇: Determine which countries and energy sources contribute most to total carbon emissions.
+* Analyze Emissions Trends 📈: Understand the annual, regional, and global trends in carbon emissions to support informed decision-making.
+* Insights on Carbon Intensity 🌍: Assess the relationship between carbon emissions and economic output (GDP) to evaluate the efficiency of different countries in managing their carbon footprint.
 
 
 ### Built With ⛏️🧑🏽‍💻
@@ -159,23 +159,24 @@ To navigate the data analyst job market, I enlisted a powerful toolkit:
 
 <!-- Problem Statement -->
 ## Problem Statement 📝
+We need to analyze the carbon footprint data for various countries over time to gain insights into global and regional carbon emissions trends. Specifically, we want to calculate the following key metrics:
 ### 1. KPI requirements 📌
 We need to analyze key indicators for our pizza sales data to gain insights into our business performance. Specifically, we want to calculate the following metrics:
-- **Total Revenue:** The sum of the total price of all pizza orders.
-- **Average Order Value:** The average amount spent per order, calculated by dividing the total revenue by the total number of orders.
-- **Total Pizzas Sold:** The sum of the quantities of all pizzas sold.
-- **Total Orders:** The total number of orders placed.
-- **Average Pizzas Per Order:** The average number of pizzas sold per order, calculated by dividing the total number of pizzas sold by the total number of orders
-
+- **Total Carbon Emissions:** The sum of all CO2 emissions from various sources (e.g., cement, coal, gas, oil).
+- **Per Capita Carbon Emissions:** Compute the average carbon emissions per person by dividing the total carbon emissions by the population of each country.
+- **Energy Consumption by Source:** Analyze the total energy consumption from various sources (e.g., coal, gas, oil) for each country and year
+- **Carbon Intensity of GDP:**  The amount of carbon emissions per unit of GDP, calculated by dividing total carbon emissions by the GDP of each country.
+- **Carbon Emissions Growth Rate:** The percentage change in total carbon emissions from one year to the next, to assess trends in carbon emissions over time.
+- 
 ### 2. CHARTS REQUIREMENT 📊
+We would like to visualize various aspects of our carbon footprint data to gain insights and understand key trends. The following charts will help us achieve this:
+- **Annual Trend for Total Carbon Emissions:** Create a line chart that displays the yearly trend of total carbon emissions for each country. This chart will help us identify long-term trends and variations in carbon emissions.
+- **Annual Trend of Carbon Emission Per Person:** A line chart to track the trend of per capita carbon emissions over the years, revealing patterns and changes in individual contributions to emissions.
 
-We would like to visualize various aspects of our pizza sales data to gain insights and understand key trends. We have identified the following requirements for creating charts:
-
-- **Daily Trend for Total Orders:** Create a bar chart that displays the daily trend of total orders over a specific time period. This chart will help us identify any patterns or fluctuations in order volumes on a daily basis.
-
-- **Monthly Trend for Total Orders:** Create a line chart that illustrates the hourly trend of total orders throughout the day. This chart will allow us to identify peak hours or periods of high order activity.
-
-- **Percentage of Sales by Pizza Category:** Create a pie chart that shows the distribution of sales across different pizza categories. This chart will provide insights into the popularity of various pizza categories and their contribution to overall sales.
+- **Energy Consumption by Source:**  Pie charts or stacked bar charts depicting the breakdown of energy consumption by source (e.g., coal, gas, oil) for each country, offering insights into the primary contributors to carbon emissions.
+  
+- **Top/Bottom Countries with CO2 Emissions:** Bar charts comparing the CO2 emissions and CO2 emissions per capita across different countries, highlighting both the highest and lowest contributors.
+- **CO2 Growth Per Country and Source:** Visualization to show the percentage contribution of CO2 growth by country and by energy source, identifying the main drivers of increasing emissions.
 
 
 <!-- USAGE EXAMPLES -->
