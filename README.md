@@ -186,39 +186,48 @@ We would like to visualize various aspects of our carbon footprint data to gain 
 ### 1. Data Collection and Preparation 🗂️
 
 #### Data Source🌐: 
-
+The data was collected from multiple global sources, including the Energy Institute and the U.S. Energy Information Administration, among others.
+.[*Our World in Data*](https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions)
 #### Data Cleaning🧹:
 
 ### 2. Data Analysis with SQL 🔍
 #### * Exploratory Data Analysis (EDA)🔎:
 I Performed initial data exploration using SQL queries to understand the distribution of data and identify any anomalies.
 #### * KPI Calculation📊:
+
 I Wrote SQL queries to calculate the required KPIs such as Total Revenue, Average Order Value, Total Pizzas Sold, Total Orders, and Average Pizzas Per Order.
-- **1. Total Revenue:** This query calculates the sum of the total price of all pizza orders.:
+- **1. Total Carbon Emissions:** This query calculates the total CO2 emissions from various sources such as cement, coal, gas, oil, other industries, land use changes, and flaring.
 ```sql
-SELECT SUM(total_price)
-AS TotalPrice from pizza_sales;
+SELECT 
+    SUM(cement_co2 + coal_co2 + gas_co2 + oil_co2 + other_industry_co2 + land_use_change_co2 + flaring_co2) AS TotalCarbonEmission
+FROM CarbonData;
+
 ```
-- **2. Average Order Value:** This query calculates the average amount spent per order, calculated by dividing the total revenue by the total number of orders.
+- **2. Average Carbon Emission Per Person:** This query calculates the average carbon emissions per capita by dividing total CO2 emissions by the total population.
 ```sql
-select SUM(total_price)/count(DISTINCT(order_id)) as AverageOrderValue 
-from pizza_sales;
+SELECT 
+    SUM(cement_co2 + coal_co2 + gas_co2 + oil_co2 + other_industry_co2 + land_use_change_co2 + flaring_co2) / SUM(population) AS AverageIndivCarbonEmission
+FROM CarbonData;
+
 ```
-- **3. Total Pizza Sold:** This query calculates the sum of the quantities of all pizzas sold.
+- **3. Total Carbon Emissions by Source:** This query calculates the total CO2 emissions for each source, including coal, gas, oil, other industries, land use changes, and flaring.
 ```sql
-SELECT SUM(quantity) as TotalPizzaSold 
-FROM pizza_sales;
+SELECT 
+    SUM(coal_co2) AS TotalCoalConsumption,
+    SUM(gas_co2) AS TotalGasConsumption,
+    SUM(oil_co2) AS TotalOilConsumption,
+    SUM(other_industry_co2) AS TotalOtherIndustryConsumption,
+    SUM(land_use_change_co2) AS TotalLandUseChangeConsumption,
+    SUM(flaring_co2) AS TotalFlaringConsumption
+FROM CarbonData;
+
 ```
-- **4. Total Orders:** This query calculates the total number of orders placed.
+- **4. Carbon Intensity of GDP:** This KPI measures the carbon emissions per unit of GDP, calculated by dividing the total carbon emissions by the GDP of each country.
 ```sql
-SELECT count(distinct(order_id)) as TotalOrders 
-FROM pizza_sales;
-```
-- **5. Average Pizza Per Order :** This query calculates
-```sql
-select CAST(SUM(quantity) as decimal(10,2)) / CAST(count(distinct order_id) as decimal(10,2)) 
-as AveragePizzaPerOrder  
-from pizza_sales;
+SELECT 
+    (SUM(cement_co2 + coal_co2 + gas_co2 + oil_co2 + other_industry_co2 + land_use_change_co2 + flaring_co2) / SUM(gdp)) AS CarbonIntensityOfGDP
+FROM CarbonData;
+
 ```
 
 #### * Trend Analysis📈:
