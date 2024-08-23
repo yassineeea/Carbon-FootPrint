@@ -22,7 +22,7 @@
   <a href="https://medium.com/@yassinezamit26">
     <img src="https://img.shields.io/badge/Medium-Read%20Articles-brightgreen" alt="Medium" />
   </a>
-  <a href="https://www.youtube.com/c/@automationworld8336">
+  <a href="https://www.youtube.com/c/@automationworld8336"> 
     <img src="https://img.shields.io/badge/YouTube-Subscribe%20Now-red" alt="YouTube" />
   </a>
     <a href="https://www.linkedin.com/in/yassine-zamit/">
