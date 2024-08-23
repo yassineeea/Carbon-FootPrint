@@ -275,6 +275,29 @@ ORDER BY TotalCarbonEmission DESC;
 ```
 ### 3. Data Visualization with Power BI 📊
 The Carbon Footprint Dashboard provides a comprehensive view of carbon emissions data across various dimensions.
+- **DAX Measures Used** To create these visualizations and insights, several DAX measures were implemented in Power BI:
+  
+Total Carbon Emissions:
+```dax
+Total Carbon Emissions = 
+SUM(CarbonData[cement_co2]) + 
+SUM(CarbonData[coal_co2]) + 
+SUM(CarbonData[gas_co2]) + 
+SUM(CarbonData[oil_co2]) + 
+SUM(CarbonData[other_industry_co2]) + 
+SUM(CarbonData[land_use_change_co2]) + 
+SUM(CarbonData[flaring_co2])
+```
+Average Carbon Emissions Per Person:
+```dax
+Average Carbon Emissions Per Person = 
+DIVIDE(
+    [Total Carbon Emissions], 
+    SUM(CarbonData[population])
+)
+```
+
+
 The first tab offers a high-level overview of the carbon emissions data. It features key performance indicators (KPIs) such as total carbon emissions, per capita emissions, and energy consumption by source. The line charts below these KPIs provide a detailed view of the annual trends for total carbon emissions and per capita emissions, highlighting the global increase in emissions over time due to industrialization and population growth.
 
 [![Pizza Sales Analysis Screenshot](https://github.com/yassineeea/Carbon-FootPrint/blob/main/CarbonDashboard/dash1.png)](https://example.com)
