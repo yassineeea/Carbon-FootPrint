@@ -161,7 +161,7 @@ To navigate the data analyst job market, I enlisted a powerful toolkit:
 ## Problem Statement 📝
 We need to analyze the carbon footprint data for various countries over time to gain insights into global and regional carbon emissions trends. Specifically, we want to calculate the following key metrics:
 ### 1. KPI requirements 📌
-We need to analyze key indicators for our pizza sales data to gain insights into our business performance. Specifically, we want to calculate the following metrics:
+We need to analyze key indicators of carbon emissions data to gain insights into our business performance. Specifically, we want to calculate the following metrics:
 - **Total Carbon Emissions:** The sum of all CO2 emissions from various sources (e.g., cement, coal, gas, oil).
 - **Per Capita Carbon Emissions:** Compute the average carbon emissions per person by dividing the total carbon emissions by the population of each country.
 - **Energy Consumption by Source:** Analyze the total energy consumption from various sources (e.g., coal, gas, oil) for each country and year
@@ -232,32 +232,39 @@ FROM CarbonData;
 
 #### * Trend Analysis📈:
 I Used SQL to extract data for daily and monthly trends, enabling the creation of the necessary charts in Power BI.
-- **1. Daily Trend of orders :** This query calculates the total number of distinct orders for each day of the week. .
+- **1. Annual Trend for Total Carbon Emissions:** This query calculates the total carbon emissions for each country per year, allowing us to visualize the trend of carbon emissions over time.
 ```sql
-SELECT DATENAME(DW, order_date)  as order_date , count(distinct order_id) as totalorders     
-FROM pizza_sales 
-GROUP BY DATENAME(DW, order_date);
+SELECT year, country, 
+    SUM(cement_co2 + coal_co2 + gas_co2 + oil_co2 + other_industry_co2 + land_use_change_co2 + flaring_co2) AS TotalCarbonEmission
+FROM CarbonData
+GROUP BY year, country
+ORDER BY year, country;
 ```
-- **2. Monthly Trend of orders  :** This query calculates the total number of distinct orders for each month.
+- **2. Annual Trend of Carbon Emission Per Person:** This query calculates the average carbon emissions per person for each country per year.
 ```sql
-SELECT DATENAME(Month, order_date)  as order_date , count(distinct order_id) as totalorders     
-FROM pizza_sales 
-GROUP BY  DATENAME(Month, order_date);
+SELECT year, country, 
+    SUM(cement_co2 + coal_co2 + gas_co2 + oil_co2 + other_industry_co2 + land_use_change_co2 + flaring_co2) / SUM(population) AS PerCapitaEmission
+FROM CarbonData
+GROUP BY year, country
+ORDER BY year, country;
 ```
-- **3. Percentages of sales per category  :** This query calculatesThis query calculates the percentage of total sales for each pizza category.
+- **3. Energy Consumption by Source:** This query breaks down the total energy consumption by source (e.g., coal, gas, oil) for each country and year, providing insights into which sources are the primary contributors to carbon emissions.
 ```sql
-SELECT pizza_category, SUM(total_price)*100 / (select SUM(total_price)
-FROM pizza_sales)  as TotalPrice 
-
-FROM pizza_sales
-GROUP BY pizza_category;
+SELECT year, country, 
+    SUM(coal_co2) AS CoalConsumption,
+    SUM(gas_co2) AS GasConsumption,
+    SUM(oil_co2) AS OilConsumption
+FROM CarbonData
+GROUP BY year, country
+ORDER BY year, country;
 ```
-- **4. Top 5 pizzas by revenue   :** This query calculates the total revenue for the top 5 pizza names, ordered by revenue in descending order.
+- **4. Top/Bottom Countries with CO2 Emissions:** This query ranks countries based on their total CO2 emissions, identifying the highest and lowest contributors to global emissions.
 ```sql
-SELECT TOP 5 pizza_name, Sum(total_price) as TotalRevenue 
-FROM pizza_sales 
-GROUP BY pizza_name
-ORDER BY TotalRevenue DESC;
+SELECT country, 
+    SUM(cement_co2 + coal_co2 + gas_co2 + oil_co2 + other_industry_co2 + land_use_change_co2 + flaring_co2) AS TotalCarbonEmission
+FROM CarbonData
+GROUP BY country
+ORDER BY TotalCarbonEmission DESC;
 ```
 ### 3. Data Visualization with Power BI 📊
 - **Dashboard Creation:** Leveraging Power BI, I transformed the processed data into interactive, insightful dashboards that provide a comprehensive view of pizza sales performance over time.  
