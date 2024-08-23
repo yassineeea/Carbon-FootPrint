@@ -46,7 +46,7 @@
   <p align="center">
     A comprehensive analysis of carbon emissions data, enhanced with interactive visualizations and actionable insights.
     <br />
-        <a href="https://github.com/yassineeea/Pizza-Sales-Analysis/blob/main/KPIreport.docx"><strong>Explore the docx »</strong></a>
+        <a href="https://github.com/yassineeea/Carbon-FootPrint/blob/main/owid-co2-data.xlsx"><strong>Explore the Data »</strong></a>
     <br />
     <br />
     
