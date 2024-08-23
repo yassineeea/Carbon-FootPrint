@@ -46,7 +46,6 @@
   <p align="center">
     A comprehensive analysis of carbon emissions data, enhanced with interactive visualizations and actionable insights.
     <br />
-    <a href="https://github.com/yassineeea/Pizza-Sales-Analysis/blob/main/KPIreport.docx"><strong>Explore the docx »</strong></a>
     <br />
     <br />
     
@@ -201,7 +200,7 @@ Ensured that all data fields, such as dates, emissions figures, and population c
 
 ### 2. Data Analysis with SQL 🔍
 
-#### * KPI Calculation📊:
+#### KPI Calculation📊:
 
 I Wrote SQL queries to calculate the required KPIs such as Total Revenue, Average Order Value, Total Pizzas Sold, Total Orders, and Average Pizzas Per Order.
 - **1. Total Carbon Emissions:** This query calculates the total CO2 emissions from various sources such as cement, coal, gas, oil, other industries, land use changes, and flaring.
@@ -238,7 +237,7 @@ FROM CarbonData;
 
 ```
 
-#### * Trend Analysis📈:
+#### Trend Analysis📈:
 I Used SQL to extract data for annual trends, enabling the creation of the necessary charts in Power BI.
 - **1. Annual Trend for Total Carbon Emissions:** This query calculates the total carbon emissions for each country per year, allowing us to visualize the trend of carbon emissions over time.
 ```sql
@@ -294,7 +293,8 @@ These visualizations provide actionable insights, enabling stakeholders to ident
 **Emissions Trends:** Identify countries with the fastest-growing emissions and those with the most significant reductions, providing insights into global and regional efforts to combat climate change.
 
 **Energy Source Impact:** Analyze which energy sources are contributing most to emissions and explore alternatives to reduce dependency on high-emission sources.
-Policy Recommendations: Use the data to inform policy decisions aimed at reducing carbon emissions, optimizing energy consumption, and promoting sustainable practices.
+
+**Policy Recommendations:** Use the data to inform policy decisions aimed at reducing carbon emissions, optimizing energy consumption, and promoting sustainable practices.
 
 
 
