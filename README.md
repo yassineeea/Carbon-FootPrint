@@ -167,7 +167,7 @@ We need to analyze key indicators of carbon emissions data to gain insights into
 - **Energy Consumption by Source:** Analyze the total energy consumption from various sources (e.g., coal, gas, oil) for each country and year
 - **Carbon Intensity of GDP:**  The amount of carbon emissions per unit of GDP, calculated by dividing total carbon emissions by the GDP of each country.
 - **Carbon Emissions Growth Rate:** The percentage change in total carbon emissions from one year to the next, to assess trends in carbon emissions over time.
-- 
+  
 ### 2. CHARTS REQUIREMENT 📊
 We would like to visualize various aspects of our carbon footprint data to gain insights and understand key trends. The following charts will help us achieve this:
 - **Annual Trend for Total Carbon Emissions:** Create a line chart that displays the yearly trend of total carbon emissions for each country. This chart will help us identify long-term trends and variations in carbon emissions.
@@ -189,6 +189,17 @@ We would like to visualize various aspects of our carbon footprint data to gain 
 The data was collected from multiple global sources, including the Energy Institute and the U.S. Energy Information Administration, among others.
 .[*Our World in Data*](https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions)
 #### Data Cleaning🧹:
+To ensure the integrity and accuracy of the analysis, significant data cleaning steps were undertaken:
+
+- **Handling Missing Values:**
+A substantial portion of the data before 1859 had missing values. To maintain the reliability of the analysis, all records with dates earlier than 1859 were removed. This decision was made after careful consideration, as the presence of missing values could skew the results and lead to inaccurate insights.
+```sql
+DELETE FROM CarbonData
+WHERE year < 1859;
+
+```
+- **Data Type Standardization:**
+Ensured that all data fields, such as dates, emissions figures, and population counts, were correctly formatted. Numeric fields were checked for consistency, and any anomalies were corrected
 
 ### 2. Data Analysis with SQL 🔍
 #### * Exploratory Data Analysis (EDA)🔎:
@@ -267,18 +278,26 @@ GROUP BY country
 ORDER BY TotalCarbonEmission DESC;
 ```
 ### 3. Data Visualization with Power BI 📊
-- **Dashboard Creation:** Leveraging Power BI, I transformed the processed data into interactive, insightful dashboards that provide a comprehensive view of pizza sales performance over time.  
+The Carbon Footprint Dashboard provides a comprehensive view of carbon emissions data across various dimensions.
+The first tab offers a high-level overview of the carbon emissions data. It features key performance indicators (KPIs) such as total carbon emissions, per capita emissions, and energy consumption by source. The line charts below these KPIs provide a detailed view of the annual trends for total carbon emissions and per capita emissions, highlighting the global increase in emissions over time due to industrialization and population growth.
+
 [![Pizza Sales Analysis Screenshot](https://github.com/yassineeea/Carbon-FootPrint/blob/main/CarbonDashboard/dash1.png)](https://example.com)
 
- 
+
+When you click on the "Top/Bottom Countries" button, the dashboard transitions to a more focused analysis. This section highlights the countries contributing the most and least to global carbon emissions. 
+
 [![Pizza Sales Analysis Screenshot](https://github.com/yassineeea/Carbon-FootPrint/blob/main/CarbonDashboard/dash2.png)](https://example.com)
 
+These visualizations provide actionable insights, enabling stakeholders to identify key areas for intervention and track progress toward reducing carbon footprints globally.
 
 ### 4. Business Insights and Reporting 🧠
 
-- **Actionable Insights:** The visualized data provides actionable insights that can drive strategic decisions, such as optimizing inventory for the best-selling pizzas, revising marketing strategies for underperforming products, and adjusting pricing models based on customer demand patterns.
+- **Actionable Insights:**
+  
+**Emissions Trends:** Identify countries with the fastest-growing emissions and those with the most significant reductions, providing insights into global and regional efforts to combat climate change.
 
-- **Performance Monitoring:** These dashboards enable continuous performance monitoring, allowing stakeholders to track progress against sales targets, identify potential issues early on, and respond swiftly to changes in market conditions.
+**Energy Source Impact:** Analyze which energy sources are contributing most to emissions and explore alternatives to reduce dependency on high-emission sources.
+Policy Recommendations: Use the data to inform policy decisions aimed at reducing carbon emissions, optimizing energy consumption, and promoting sustainable practices.
 
 
 
@@ -287,24 +306,11 @@ ORDER BY TotalCarbonEmission DESC;
 
 Yassine Zamit - [linkedin-url]: https://linkedin.com/in/yassine-zamit/ - yassinezamit26@gmail.com
 
-Project Link: [https://github.com/yassineeea/Pizza-Sales-Analysis](https://github.com/yassineeea/Pizza-Sales-Analysis)
+Project Link: [https://github.com/yassineeea/Carbon-FootPrint](https://github.com/yassineeea/Carbon-FootPrint)
 
 
 
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
 
 
 
