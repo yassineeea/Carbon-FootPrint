@@ -38,7 +38,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="Pizza%20Sales%20Images/pizza-slice.png" alt="Logo" width="80" height="80">
+    <img src="carbon-footprint-made-leaves.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Carbon FootPrint Analysis </h3>
@@ -84,7 +84,6 @@
       <ul>
         <li><a href="#Data Analysis with SQL">Data Analysis with SQL</a></li>
               <ul>
-                 <li><a href="#Exploratory Data Analysis (EDA)">Exploratory Data Analysis (EDA)</a></li>
                  <li><a href="#KPI Calculation">KPI Calculation</a></li>
                  <li><a href="#Trend Analysis">Trend Analysis</a></li>
               </ul>
@@ -100,7 +99,6 @@
       </ul>         
     </li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
