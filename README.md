@@ -202,8 +202,7 @@ WHERE year < 1859;
 Ensured that all data fields, such as dates, emissions figures, and population counts, were correctly formatted. Numeric fields were checked for consistency, and any anomalies were corrected
 
 ### 2. Data Analysis with SQL 🔍
-#### * Exploratory Data Analysis (EDA)🔎:
-I Performed initial data exploration using SQL queries to understand the distribution of data and identify any anomalies.
+
 #### * KPI Calculation📊:
 
 I Wrote SQL queries to calculate the required KPIs such as Total Revenue, Average Order Value, Total Pizzas Sold, Total Orders, and Average Pizzas Per Order.
@@ -242,7 +241,7 @@ FROM CarbonData;
 ```
 
 #### * Trend Analysis📈:
-I Used SQL to extract data for daily and monthly trends, enabling the creation of the necessary charts in Power BI.
+I Used SQL to extract data for annual trends, enabling the creation of the necessary charts in Power BI.
 - **1. Annual Trend for Total Carbon Emissions:** This query calculates the total carbon emissions for each country per year, allowing us to visualize the trend of carbon emissions over time.
 ```sql
 SELECT year, country, 
